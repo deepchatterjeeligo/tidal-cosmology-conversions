@@ -1,8 +1,11 @@
-from astropy import constants as const, cosmology, units as u
+from astropy import (
+    constants as const,
+    cosmology,
+    units as u
+)
 import bilby
-from gwpy.timeseries import TimeSeries
-import numpy as np
-import scipy as sp
+
+from .lambda_k_relations import get_lambda_from_mass
 
 
 def hubble_constant_to_lambda(parameters):
