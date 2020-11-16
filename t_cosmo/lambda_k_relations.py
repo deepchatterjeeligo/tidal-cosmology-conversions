@@ -1,8 +1,12 @@
+import pkg_resources
+
 import numpy as np
 from scipy.special import gamma
 
 n = 0.8
-a_k_i = np.loadtxt('fit_values.txt').T
+a_k_i = np.loadtxt(
+    pkg_resources.resource_filename(__name__,  '/data/fit_values.txt')
+).T
 
 def get_lambda_0_k(k):
     def _get_lambda_k(lambda_0_0):
