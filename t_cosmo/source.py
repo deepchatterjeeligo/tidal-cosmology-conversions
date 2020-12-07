@@ -45,6 +45,9 @@ def lambda_0_gw170817_lal_binary_neutron_star(
     lambda_2 = get_lambda_from_mass(
         mass_2_source, lambda_0_0, M0=M0
     )
+    # set lambda to 0 if negative
+    lambda_1 = 0 if lambda_1 < 0 else lambda_1
+    lambda_2 = 0 if lambda_2 < 0 else lambda_2
 
     return bilby.gw.source.lal_binary_neutron_star(
         frequency_array, mass_1, mass_2, luminosity_distance, a_1, tilt_1,
@@ -104,6 +107,9 @@ def lambda_0_h0_lal_binary_neutron_star(
     lambda_2 = get_lambda_from_mass(
         mass_2_source, lambda_0_0, M0=M0
     )
+    # set lambda to 0 if negative
+    lambda_1 = 0 if lambda_1 < 0 else lambda_1
+    lambda_2 = 0 if lambda_2 < 0 else lambda_2
 
     return bilby.gw.source.lal_binary_neutron_star(
         frequency_array, mass_1, mass_2, luminosity_distance, a_1, tilt_1,
