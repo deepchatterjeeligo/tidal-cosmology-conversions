@@ -130,3 +130,9 @@ mass_2_prior_gw170817 = CustomMassPrior(
     _m2_cum_freq_interpolant
 )
 """Secondary mass prior using GW170817 posterior samples."""
+
+__all__ = (
+    'CustomMassPrior', 'ZSquaredPrior',
+    'mass_1_prior_gw170817',
+    'mass_2_prior_gw170817'
+)
