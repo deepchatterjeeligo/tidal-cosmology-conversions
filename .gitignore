@@ -2,3 +2,4 @@
 t_cosmo_conversions.egg-info
 t_cosmo/__pycache__/
 t_cosmo/GW170817_GWTC-1.hdf5
+.DS_store
