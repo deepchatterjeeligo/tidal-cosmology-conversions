@@ -160,7 +160,7 @@ def bbh_params_lal_binary_neutron_star(
     # h0 = 70.0
     # hubble_constant = h0 * u.km / u.s / u.Mpc
     # cosmo = cosmology.FlatLambdaCDM(H0=hubble_constant, Om0=0.3)
-    cosmo = cosmo.Planck18
+    cosmo = cosmology.Planck18
 
     try:
         REDSHIFT = cosmology.z_at_value(
